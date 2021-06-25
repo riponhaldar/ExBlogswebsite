@@ -1,0 +1,313 @@
+// import file path
+@import 'media';
+
+// font aweome link
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:ital@0;1&family=Quattrocento:wght@400;700&display=swap');
+//  font-family: 'Fauna One', serif;
+//  font-family: 'Playfair Display', serif;
+//  font-family: 'Quattrocento', serif;
+$page_color: #f9fafb;
+$nav_text_color: #4b5563;
+$textColor: #1f2937;
+$text: #afb4bd;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1420px;
+  margin: auto;
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: $textColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+}
+#btn {
+  color: rgb(0, 0, 0);
+  background: $page_color;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+span {
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: $text;
+}
+h1 {
+  padding: 10px 0;
+  font-size: 2.3rem;
+  font-family: 'Quattrocento', serif;
+  color: $nav_text_color;
+}
+h2 {
+  padding: 10px 0;
+  font-family: 'Quattrocento', serif;
+  color: $nav_text_color;
+}
+p {
+  font-family: 'Playfair Display', serif;
+
+  color: $text;
+  font-weight: 400;
+  word-spacing: 2px;
+  font-size: 1.1rem;
+}
+// nav  --------------------------------  start ****
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+// }
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: $page_color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  //   Nav header start----------------------
+  .nav_header {
+    .logo {
+      float: left;
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      cursor: pointer;
+      font-weight: 800;
+      a {
+        color: $nav_text_color;
+      }
+      a:hover {
+        color: $text;
+      }
+    }
+    .nav-toggle {
+      color: #fff;
+      background: $text;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      display: none;
+    }
+    //  responsive ----------------------------
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        font-size: 1.7rem;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+  }
+  //nav items ----------
+  .nav_links {
+    display: flex;
+    margin: auto;
+    height: auto;
+    list-style-type: none;
+    justify-content: center;
+  }
+  .nav_items {
+    position: relative;
+
+    a {
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: $nav_text_color;
+      font-family: 'Quattrocento', serif;
+      // margin-right: 30px;
+      padding: 20px;
+      padding-bottom: 10px;
+    }
+    a:hover {
+      color: $text;
+      letter-spacing: 3px;
+    }
+  }
+  .subs {
+    background: #4b5563;
+    padding: 0.5rem 0.8rem;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-family: 'Fauna One', serif;
+    border-radius: 5px;
+    //  display: flex;
+    //  margin: auto;
+    //  height: auto;
+  }
+  //   responsive  mobile -----------------
+  @include mobile {
+    display: block;
+    .nav_links {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+      display: block;
+      justify-content: center;
+      text-align: center;
+    }
+    .nav_items {
+      margin-top: 20px;
+      a:hover:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+
+        display: flex;
+        bottom: 20px;
+        background: rgb(0, 0, 0);
+      }
+    }
+
+    .show-links {
+      height: 15rem;
+    }
+    .subs {
+      display: none;
+    }
+  }
+}
+
+// section hero start  ---------------------
+
+.hero {
+  padding-top: 10rem;
+  background: $page_color;
+  .hero_row {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .hero_card {
+      width: 500px;
+      margin: 20px;
+      @include tab {
+        width: 400px;
+      }
+
+      p {
+        font-family: 'Playfair Display', serif;
+        padding-top: 10px;
+        color: $text;
+        font-weight: 400;
+        word-spacing: 2px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 4rem;
+  }
+}
+
+// blogs start
+
+.blogs {
+  .blog_row {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .blog_card {
+      width: 400px;
+
+      margin: 20px 10px;
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $page_color;
+  padding-top: 4rem;
+
+  .footer_row {
+    padding-bottom: 2rem;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    .about {
+      width: 33%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .some_info {
+      display: flex;
+
+      position: relative;
+      width: 25%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      ul {
+        margin-right: 3rem;
+        list-style: none;
+        li {
+          padding-top: 10px;
+          a {
+            color: $text;
+          }
+        }
+      }
+      @include mobile {
+        padding-top: 10px;
+        width: 100%;
+      }
+    }
+    .contact_us {
+      width: 20%;
+      a {
+        font-size: 2rem;
+        color: $text;
+        padding-right: 10px;
+      }
+      @include mobile {
+        padding-top: 10px;
+        padding-left: 15px;
+        width: 100%;
+      }
+    }
+  }
+  h3 {
+    font-family: 'Quattrocento', serif;
+    padding-bottom: 20px;
+    font-size: 1.7rem;
+    color: $nav_text_color;
+  }
+}

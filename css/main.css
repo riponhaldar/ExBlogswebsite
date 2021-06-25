@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:ital@0;1&family=Quattrocento:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1420px;
+  margin: auto;
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #1f2937;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+#btn {
+  color: black;
+  background: #f9fafb;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+span {
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #afb4bd;
+}
+
+h1 {
+  padding: 10px 0;
+  font-size: 2.3rem;
+  font-family: 'Quattrocento', serif;
+  color: #4b5563;
+}
+
+h2 {
+  padding: 10px 0;
+  font-family: 'Quattrocento', serif;
+  color: #4b5563;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  color: #afb4bd;
+  font-weight: 400;
+  word-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: #f9fafb;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav .nav_header .logo {
+  float: left;
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+nav .nav_header .logo a {
+  color: #4b5563;
+}
+
+nav .nav_header .logo a:hover {
+  color: #afb4bd;
+}
+
+nav .nav_header .nav-toggle {
+  color: #fff;
+  background: #afb4bd;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  nav .nav_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .nav_header .logo {
+    font-size: 1.7rem;
+  }
+  nav .nav_header .nav-toggle {
+    display: block;
+  }
+}
+
+nav .nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  height: auto;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav_items {
+  position: relative;
+}
+
+nav .nav_items a {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #4b5563;
+  font-family: 'Quattrocento', serif;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+nav .nav_items a:hover {
+  color: #afb4bd;
+  letter-spacing: 3px;
+}
+
+nav .subs {
+  background: #4b5563;
+  padding: 0.5rem 0.8rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-family: 'Fauna One', serif;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 980px) {
+  nav {
+    display: block;
+  }
+  nav .nav_links {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  nav .nav_items {
+    margin-top: 20px;
+  }
+  nav .nav_items a:hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 20px;
+    background: black;
+  }
+  nav .show-links {
+    height: 15rem;
+  }
+  nav .subs {
+    display: none;
+  }
+}
+
+.hero {
+  padding-top: 10rem;
+  background: #f9fafb;
+}
+
+.hero .hero_row {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero .hero_row .hero_card {
+  width: 500px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1426px) {
+  .hero .hero_row .hero_card {
+    width: 400px;
+  }
+}
+
+.hero .hero_row .hero_card p {
+  font-family: 'Playfair Display', serif;
+  padding-top: 10px;
+  color: #afb4bd;
+  font-weight: 400;
+  word-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 980px) {
+  .hero {
+    padding-top: 4rem;
+  }
+}
+
+.blogs .blog_row {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blogs .blog_row .blog_card {
+  width: 400px;
+  margin: 20px 10px;
+}
+
+.blogs .blog_row .blog_card img {
+  border-radius: 5px;
+}
+
+.footer {
+  background: #f9fafb;
+  padding-top: 4rem;
+}
+
+.footer .footer_row {
+  padding-bottom: 2rem;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .footer_row .about {
+  width: 33%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 980px) {
+  .footer .footer_row .about {
+    width: 100%;
+  }
+}
+
+.footer .footer_row .some_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 25%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer .footer_row .some_info ul {
+  margin-right: 3rem;
+  list-style: none;
+}
+
+.footer .footer_row .some_info ul li {
+  padding-top: 10px;
+}
+
+.footer .footer_row .some_info ul li a {
+  color: #afb4bd;
+}
+
+@media screen and (max-width: 980px) {
+  .footer .footer_row .some_info {
+    padding-top: 10px;
+    width: 100%;
+  }
+}
+
+.footer .footer_row .contact_us {
+  width: 20%;
+}
+
+.footer .footer_row .contact_us a {
+  font-size: 2rem;
+  color: #afb4bd;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  .footer .footer_row .contact_us {
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 100%;
+  }
+}
+
+.footer h3 {
+  font-family: 'Quattrocento', serif;
+  padding-bottom: 20px;
+  font-size: 1.7rem;
+  color: #4b5563;
+}
+/*# sourceMappingURL=main.css.map */
