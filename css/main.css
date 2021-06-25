@@ -32,7 +32,7 @@ img {
 
 #btn {
   color: black;
-  background: #f9fafb;
+  background: #afb4bd;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   outline: none;
@@ -102,13 +102,6 @@ nav .nav_header .logo a:hover {
 }
 
 nav .nav_header .nav-toggle {
-  color: #fff;
-  background: #afb4bd;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  border-radius: 5px;
   display: none;
 }
 
@@ -257,6 +250,39 @@ nav .subs {
   }
 }
 
+.bg {
+  width: 100%;
+  height: 60vh;
+  background: url("/images/bacK_fixed.jpg") no-repeat fixed;
+  background-position: center center;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg .bg_text {
+  padding-left: 15px;
+}
+
+.bg .bg_text h1 {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.bg .bg_text p {
+  color: #fff;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+}
+
 .blogs .blog_row {
   margin: auto;
   -webkit-box-align: center;
@@ -339,6 +365,11 @@ nav .subs {
   color: #afb4bd;
 }
 
+.footer .footer_row .some_info ul li a:hover {
+  color: #1f2937;
+  letter-spacing: 3px;
+}
+
 @media screen and (max-width: 980px) {
   .footer .footer_row .some_info {
     padding-top: 10px;
@@ -354,6 +385,11 @@ nav .subs {
   font-size: 2rem;
   color: #afb4bd;
   padding-right: 10px;
+}
+
+.footer .footer_row .contact_us a:hover {
+  color: #1f2937;
+  letter-spacing: 3px;
 }
 
 @media screen and (max-width: 980px) {
